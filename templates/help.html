@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <style>
+
+    </style>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">KeduRight</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Main</a></li>
+            <li class='active' ><a href="/help">help</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-md-12"><h1>{{title}}</h1></div>
+        <div class="col col-md-12"><p>나는 준다 도움을 당신이 어떻게 사용하는지 이것 장소 후벼파는 keducenter</p></div>
+        <div class="col col-md-12">
+            <ol>
+                <li>로그인 한다 이곳 : <a href="http://keducenter.co.kr/" target="_blank">https://keducenter.co.kr/</a>
+                </li>
+                <li>필요하다면 인증 후 비밀번호를 바꾼다</li>
+                <li><a href="http://keducenter.co.kr/lms/class/student/page.php?p=cl_lecture" target="_blank">강의실로</a> 이동후
+                    강의보기를 클릭하여 로그인 이후 처음의 capcha인증을 패스한다<span style="color:red">**중요</span>
+                </li>
+                <img src={{img1}} style="border:2px solid; zoom:0.5"/>
+                <li>강의보기 화면을 끄고
+                    <a href="http://keducenter.co.kr/lms/class/student/page.php?p=cl_lecture" target="_blank">강의실페이지</a>에서
+                    f12버튼을 눌러 '개발자 도구'를 호출한다.
+                </li>
+                <img src={{img2}} style="border:2px solid; zoom:0.8;"/>
+                <li>
+                    개발자 도구화면에서 <span style="color:red">차례대로</span> 좌상단의 'Elements' 탭(1번) 클릭,
+                    좌하단의 'Console' 탭(2번) 클릭, 최하단의 입력부분(3번)에 'document.cookie' 입력 후 엔터를 누르면
+                    바로 윗부분(4번)에 문자들을 전부 복사하여 이 사이트 쿠키입력부분에 입력합니다.
+                </li>
+                <img src={{img3}} style="border:2px solid; zoom:0.8;"/>
+                <li>
+                    이후 필요한 경우 차수만 선택하시고, pid불러오기 버튼 클릭 후 pid입력부분이 채워지면 강의마치기 버튼을 누르고 잠시 기다리시면 됩니다.
+                    참고로 차수는 실행할 때마다 차회로 자동 선택되므로 건드리지 않으셔도 됩니다.
+                </li>
+                <li>
+                    <span style="color:red">keducenter는 2시간마다 로그아웃 처리가 되므로 최소 2시간에 한번씩은 페이지 새로고침을 해주세요.<br/>
+                        끝난 후에는 강의실에서 진도율 확인을 꼭 해야 합니다. 수료 시험은 꼭 본인이 보셔야 합니다.</span>
+                </li>
+            </ol>
+            <div class="col col-md-12"><h3>그리고 좀 눈치없이 대놓고 쓰지말고</h3></div>
+        </div>
+
+    </div>
+    <div class="row" style="height:400px">
+
+    </div>
+</div>
+</body>
+</html>
